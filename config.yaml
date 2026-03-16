@@ -1,0 +1,41 @@
+jarvis:
+  name: "Jarvis"
+  version: "1.0.0"
+  user: "Gaurav"
+
+user_profile:
+  wake_times:
+    weekday: "05:40"
+    weekend: "07:00"
+  comfort_temp_min: 23
+  comfort_temp_max: 25
+  preferred_fan_speed: 50
+
+llm:
+  provider: "ollama"
+  model: "mistral"
+  host: "http://localhost:11434"
+  timeout: 30
+  max_tokens: 512
+
+presence:
+  away_timeout_minutes: 120
+  check_interval_seconds: 30
+
+hardware:
+  light_pin: 26
+  fan_pin: 27
+  motion_sensor_pin: 14
+  dht_sensor_pin: 4
+
+logging:
+  level: "INFO"
+  log_dir: "data"
+  events_log: "data/events_log.jsonl"
+  conversation_log: "data/conversation_history.jsonl"
+
+paths:
+  models_dir: "models"
+  data_dir: "data"
+  user_profile: "models/user_profile.json"
+  behavior_patterns: "models/behavior_patterns.json"
