@@ -6,3 +6,6 @@ pyyaml
 rich
 pytest
 python-dotenv
+pyttsx3
+SpeechRecognition
+pyaudio
