@@ -1,0 +1,19 @@
+user:
+  name: "Sir"
+  wake_times:
+    weekday: "05:40"
+    weekend: "07:00"
+  comfort:
+    temperature_min: 23
+    temperature_max: 25
+    preferred_fan_speed: 50
+
+llm:
+  model: "mistral"
+  local: true
+  offline: true
+
+logging:
+  level: "INFO"
+  file: "data/events_log.jsonl"
+  console: true
