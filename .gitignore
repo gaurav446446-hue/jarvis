@@ -205,3 +205,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Jarvis runtime data
+data/*.jsonl
+data/events_log.jsonl
+data/conversation_history.jsonl

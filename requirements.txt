@@ -1,0 +1,8 @@
+ollama
+scikit-learn
+numpy
+pandas
+pyyaml
+rich
+pytest
+python-dotenv

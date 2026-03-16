@@ -1,0 +1,35 @@
+{
+  "patterns": {
+    "morning_routine": {
+      "trigger": "wake_up",
+      "actions": [
+        {"type": "light", "action": "fade_in", "duration": 2},
+        {"type": "fan", "action": "set_speed", "value": 50},
+        {"type": "say", "message": "Good morning, Sir!"}
+      ]
+    },
+    "arrival": {
+      "trigger": "presence_detected",
+      "actions": [
+        {"type": "light", "action": "turn_on"},
+        {"type": "fan", "action": "set_speed", "value": 50},
+        {"type": "say", "message": "Welcome home, Sir!"}
+      ]
+    },
+    "extended_absence": {
+      "trigger": "absence_2_hours",
+      "actions": [
+        {"type": "light", "action": "turn_off"},
+        {"type": "fan", "action": "set_speed", "value": 0}
+      ]
+    }
+  },
+  "comfort_thresholds": {
+    "temperature_high": 26,
+    "temperature_low": 22,
+    "humidity_high": 75,
+    "humidity_low": 40
+  },
+  "version": "1.0",
+  "updated_at": "2025-03-16"
+}
