@@ -12,9 +12,13 @@ from src.utils.constants import DeviceState
 
 
 def _dt(hour: int, minute: int, weekday: int = 0) -> datetime:
-    """Build a datetime with the given time and weekday (0=Monday)."""
-    # Find a date that has the desired weekday
-    base = datetime(2025, 3, 17)  # Monday
+    """Build a datetime with the given time and weekday (0=Monday).
+
+    Uses 2025-03-17 (a Monday) as a fixed anchor to compute the target weekday.
+    The result is always a deterministic datetime regardless of the actual run date.
+    """
+    # Fixed anchor date (a Monday); we compute the target weekday from it
+    base = datetime(2025, 3, 17)  # Monday – used as a stable reference only
     delta_days = (weekday - base.weekday()) % 7
     from datetime import timedelta
     target = base + timedelta(days=delta_days)
