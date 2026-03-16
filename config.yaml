@@ -17,3 +17,15 @@ logging:
   level: "INFO"
   file: "data/events_log.jsonl"
   console: true
+
+voice:
+  enabled: true
+  microphone:
+    index: null          # Auto-detect default microphone, or specify device index
+    timeout: 10          # Seconds to wait for speech to begin
+    energy_threshold: 4000  # Minimum audio energy; lower = more sensitive
+  speaker:
+    voice: "male"        # "male" or "female"
+    rate: 150            # Words per minute (100–200)
+    volume: 0.9          # 0.0 (silent) to 1.0 (maximum)
+
